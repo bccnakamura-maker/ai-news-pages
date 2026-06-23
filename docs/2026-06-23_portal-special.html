@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-06-23 ユーザポータル構築 特別号</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --ink: #1f2937;
+      --muted: #667085;
+      --line: #d7dee8;
+      --card: #ffffff;
+      --navy: #18324a;
+      --blue: #0b5394;
+      --soft: #eef5ff;
+      --accent: #e7f0fb;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.85;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 44px;
+    }
+    header {
+      background: linear-gradient(135deg, #18324a, #28547a);
+      color: #fff;
+      padding: 28px;
+      border-radius: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 28px rgba(24, 50, 74, 0.18);
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 1.85rem;
+      line-height: 1.35;
+    }
+    header p {
+      margin: 0;
+      color: #e7eef7;
+    }
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.24);
+      font-size: 0.86rem;
+    }
+    section, article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--line);
+    }
+    h3 {
+      font-size: 1.16rem;
+      margin: 0 0 10px;
+      line-height: 1.5;
+    }
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    a:hover { text-decoration: underline; }
+    .lead {
+      background: var(--soft);
+      border-left: 5px solid var(--blue);
+    }
+    .article-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0 0 12px;
+    }
+    .tag {
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      padding: 2px 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #25415f;
+      font-size: 0.82rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 8px;
+    }
+    .memo {
+      background: #fafcff;
+      border: 1px dashed #b8c7d9;
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 12px;
+    }
+    .memo-title {
+      color: #25415f;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 28px;
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 16px 12px 34px; }
+      header, section, article { padding: 18px; border-radius: 16px; }
+      header h1 { font-size: 1.45rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>ユーザポータル構築 特別号</h1>
+      <p>問い合わせ削減、マニュアル案内、FAQ、権限管理、アクセシビリティを中心に、公共・図書館分野のサポートポータル構築へ応用しやすい公開情報を整理しました。</p>
+      <div class="meta">
+        <span class="pill">2026-06-23</span>
+        <span class="pill">特別号</span>
+        <span class="pill">ユーザポータル</span>
+        <span class="pill">FAQ・RAG・権限管理</span>
+      </div>
+    </header>
+
+    <section class="lead">
+      <h2>今日の見立て</h2>
+      <p>ユーザポータルは、単なる資料置き場ではなく、利用者が自己解決できる導線、対象者ごとの情報出し分け、問い合わせ前のFAQ検索、必要時の有人対応への橋渡しを一体で設計することが重要です。特に公共・図書館分野では、職員のIT習熟度に差があるため、アクセシビリティ、画面のわかりやすさ、権限管理、ナレッジ更新のしやすさを最初から要件に入れる必要があります。</p>
+    </section>
+
+    <article>
+      <div class="tag">公共ポータル</div><div class="tag">自治体DX</div><div class="tag">問い合わせ削減</div>
+      <h3>1. 自治体フロントヤード改革は、ポータルを「住民・利用者接点」として考えるヒントになる</h3>
+      <p class="article-meta">出典：デジタル庁「自治体フロントヤード改革の取組状況に関するダッシュボード」 最終更新日：2026年5月13日</p>
+      <p>デジタル庁のダッシュボードでは、住民との接点の多様化・充実化、窓口業務の改善、利便性向上、業務効率化を目的とした自治体フロントヤード改革の取組状況が整理されています。図書館向けポータルでも、単に情報を掲載するだけでなく、問い合わせの入口、自己解決、必要時の連絡導線、運用改善のためのデータ確認までを一連の流れとして設計する視点が参考になります。</p>
+      <ul>
+        <li>ポータルの目的は「情報掲載」ではなく「接点の改善」と定義する。</li>
+        <li>FAQ、マニュアル案内、お知らせ、問い合わせ導線を別々に置くのではなく、利用者の行動順に並べる。</li>
+        <li>よく見られた情報、検索されたキーワード、解決できなかった質問を運用改善に使う。</li>
+      </ul>
+      <div class="memo">
+        <p class="memo-title">構築メモ</p>
+        <p>トップ画面は「お知らせ」「よくある困りごと」「マニュアル検索」「問い合わせ」の順に置くと、自己解決から有人対応までの流れを作りやすいです。</p>
+      </div>
+      <p>参照：<a href="https://www.digital.go.jp/resources/govdashboard/front-yard-reform">自治体フロントヤード改革の取組状況に関するダッシュボード</a></p>
+    </article>
+
+    <article>
+      <div class="tag">アクセシビリティ</div><div class="tag">公共サイト</div><div class="tag">画面設計</div>
+      <h3>2. 公共向けポータルは、最初からアクセシビリティを設計条件に入れる</h3>
+      <p class="article-meta">出典：デジタル庁「ウェブアクセシビリティ導入ガイドブック」 最終更新日：2025年10月16日</p>
+      <p>デジタル庁のガイドブックは、行政官や事業者がウェブアクセシビリティの考え方や取り組み方を学べるように整理された資料です。図書館向けポータルでも、画面を作ってからアクセシビリティを後付けするのではなく、文字サイズ、色の見やすさ、スマートフォン対応、スクリーンリーダーでの読み上げ順、専門用語の抑制を初期設計に含める方が安全です。</p>
+      <ul>
+        <li>メニュー名や検索窓の説明は、短く具体的な言葉にする。</li>
+        <li>重要なお知らせは色だけで区別せず、ラベルや見出しでも意味が伝わるようにする。</li>
+        <li>スマートフォン表示、キーボード操作、読み上げ順を公開前チェックに入れる。</li>
+      </ul>
+      <div class="memo">
+        <p class="memo-title">構築メモ</p>
+        <p>図書館職員向けの画面でも、年齢層やIT習熟度の差を前提に「迷わない文言」「大きめのボタン」「カテゴリの少なさ」を優先すると定着しやすくなります。</p>
+      </div>
+      <p>参照：<a href="https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook">ウェブアクセシビリティ導入ガイドブック</a></p>
+    </article>
+
+    <article>
+      <div class="tag">AIチャット</div><div class="tag">RAG</div><div class="tag">ナレッジベース</div>
+      <h3>3. Difyのナレッジ機能は、FAQ・マニュアル案内ポータルの考え方に近い</h3>
+      <p class="article-meta">出典：Dify Docs「Knowledge」</p>
+      <p>Difyの公式ドキュメントでは、独自データや専門知識をもとにAIアプリを構築できる用途として、カスタマーサポートチャットボットや社内ナレッジポータルが挙げられています。最新の製品ドキュメント、FAQ、トラブルシューティングガイドから回答する考え方は、図書館向けポータルにおける「マニュアル案内」「FAQ検索」「問い合わせ前の自己解決」に応用できます。</p>
+      <ul>
+        <li>最初から全マニュアルをAIに読ませるより、FAQ、章番号、見出し、キーワードを整備する方が始めやすい。</li>
+        <li>回答本文だけでなく、参照元のマニュアル名、章番号、更新日を出す設計にすると信頼しやすい。</li>
+        <li>検索精度を上げるには、問い合わせ履歴をそのまま投入するのではなく、質問・回答・対象業務・関連資料に分けて整理する。</li>
+      </ul>
+      <div class="memo">
+        <p class="memo-title">構築メモ</p>
+        <p>AIチャットは最初から万能窓口にせず、「よくある質問に答える」「該当マニュアルの場所を案内する」役割に限定すると、誤回答リスクを抑えやすいです。</p>
+      </div>
+      <p>参照：<a href="https://docs.dify.ai/en/use-dify/knowledge/readme">Dify Docs - Knowledge</a></p>
+    </article>
+
+    <article>
+      <div class="tag">Softr</div><div class="tag">Airtable連携</div><div class="tag">権限管理</div>
+      <h3>4. Softrのクライアントポータル設計は、図書館別の出し分けに応用しやすい</h3>
+      <p class="article-meta">出典：Softr Help Docs「How to Create a Client Portal?」</p>
+      <p>Softrのクライアントポータル作成ガイドでは、Airtableのデータを接続し、ユーザーグループや条件付きフィルターによって、ログインユーザーごとに関連するページ・ブロック・レコードだけを表示する考え方が説明されています。図書館向けポータルでも、図書館ごとのお知らせ、契約範囲、システム種別、クラウド利用有無などを属性として持たせれば、対象者に必要な情報だけを出し分けやすくなります。</p>
+      <ul>
+        <li>ユーザー単位ではなく、図書館単位、システム種別、利用サービス別の属性設計が重要になる。</li>
+        <li>お知らせや資料に「対象属性」を持たせると、全体向け・一部向けの出し分けがしやすい。</li>
+        <li>公開前には、ログインなし、標準ユーザー、特定属性ユーザー、管理者の表示確認が必要。</li>
+      </ul>
+      <div class="memo">
+        <p class="memo-title">構築メモ</p>
+        <p>Airtable側のテーブルは「ユーザー」「図書館」「お知らせ」「資料索引」「FAQ」を分け、各テーブルを属性で結び付けると後から拡張しやすくなります。</p>
+      </div>
+      <p>参照：<a href="https://docs.softr.io/how-to-guides/how-to-create-a-client-portal">Softr Help Docs - How to Create a Client Portal?</a></p>
+    </article>
+
+    <article>
+      <div class="tag">Airtable</div><div class="tag">外部ユーザー</div><div class="tag">運用コスト</div>
+      <h3>5. Airtable Portalsは、外部ユーザー権限と料金設計の確認材料になる</h3>
+      <p class="article-meta">出典：Airtable Support「Using Airtable Portals for external collaborators」 更新日：2026年4月7日</p>
+      <p>Airtableの外部コラボレーター向けポータル機能では、招待された外部ユーザーが通常のインターフェース利用者に近い画面を利用しつつ、共有操作や外部ユーザー同士の表示などが制限される仕組みが説明されています。ポータル構築では、画面機能だけでなく、外部ユーザーの権限、ユーザー数、編集可否、閲覧のみの場合の扱い、課金条件を事前に確認する必要があります。</p>
+      <ul>
+        <li>閲覧のみ、コメント可、編集可で運用コストとリスクが変わる。</li>
+        <li>外部ユーザー同士が見えてよいか、組織ごとにデータを分離できるかを確認する。</li>
+        <li>無料検証では問題なく見えても、本番ユーザー数では料金体系が変わる可能性がある。</li>
+      </ul>
+      <div class="memo">
+        <p class="memo-title">構築メモ</p>
+        <p>本番前に「閲覧のみで足りる利用者」「投稿や編集が必要な利用者」「管理者」を分け、想定アカウント数と料金を表にしておくと判断しやすいです。</p>
+      </div>
+      <p>参照：<a href="https://support.airtable.com/docs/using-airtable-portals-for-external-collaborators">Airtable Support - Using Airtable Portals for external collaborators</a></p>
+    </article>
+
+    <section>
+      <h2>次に確認したいこと</h2>
+      <ul>
+        <li>ポータルの最小構成を「お知らせ」「FAQ」「マニュアル索引」「問い合わせ導線」の4つに絞る。</li>
+        <li>図書館ごとの属性一覧を作り、どのお知らせ・資料を出し分ける必要があるか確認する。</li>
+        <li>AIチャットは、まずFAQとマニュアル案内に限定して検証する。</li>
+        <li>公開前チェックとして、スマートフォン表示、アクセシビリティ、権限別表示、個人情報混入の確認を入れる。</li>
+      </ul>
+    </section>
+
+    <footer>Generated as a public special issue for Paropten News Archive.</footer>
+  </main>
+</body>
+</html>
